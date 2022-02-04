@@ -1,9 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import AddImageButton from "./index";
 
+const test = { handleClick: jest.fn() };
 it("check if component comntains button element with the text Add image", async () => {
   //first we render the component
-  render(<AddImageButton />);
+  render(<AddImageButton {...test} />);
 
   //check if the button exist
   //test by role
