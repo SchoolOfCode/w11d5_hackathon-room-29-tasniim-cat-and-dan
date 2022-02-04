@@ -1,9 +1,16 @@
-import React from "react";
+import { useState } from "react";
 
 export default function AddButton() {
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+  }
+
   return (
     <div>
-      <button data-testID={`checkforbutton`}>hello</button>
+      <button onClick={handleClick}>Add 1</button>
+      <p>{count}</p>
     </div>
   );
 }
